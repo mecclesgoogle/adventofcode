@@ -7,7 +7,7 @@ C = 1
 T = 0
 
 def is_checkpoint(c: int) -> bool:
-  return c == 20 or (c - 20) % 40 == 0
+  return (c - 20) % 40 == 0
 
 f = open(input_file, 'r')
 for line in f:
