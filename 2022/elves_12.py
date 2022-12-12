@@ -86,4 +86,4 @@ for i in range(len(X)):
       if distance is not None:
         distances.add(distance)
           
-print(min(sorted(distances)))
+print(min(distances))
