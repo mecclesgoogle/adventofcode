@@ -1,11 +1,8 @@
-#!/usr/bin/python3
 import re
 import sys
 
-
-infile = sys.argv[1] if len(sys.argv)>1 else '/Users/markeccles/adventcode/2022/elves_15.txt'
-data = open(infile).read().strip()
-lines = [x for x in data.split('\n')]
+input_file = sys.argv[1] if len(sys.argv) > 1 else '/Users/markeccles/adventcode/2022/elves_15.txt'
+X = [line.strip() for line in open(input_file)]
 
 S_D = {} # Sensor loc -> distance to closest beacon
 S_B = {} # Sensor loc -> closest beacon loc
