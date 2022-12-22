@@ -22,11 +22,7 @@ def mix(input:list[int], n=1, m=1):
       currentindex = result.index((i, val))
       result.remove((i, val))
       newindex = currentindex + val
-      if newindex >= length:
-        newindex %= (length - 1 )
-      elif newindex < 0:
-        newindex %= (length - 1)
-
+      newindex %= (length - 1)
       result.insert(newindex, (i, val))
 
   return [val for (_, val) in result]
