@@ -51,23 +51,16 @@ func main() {
 		rowNumber++
 	}
 
-	// fmt.Println("Numbers are at:", numberLocs)
-	// fmt.Println("Symbols are at:", symbolLocs)
-
 	for _, n := range numberLocs {
 		if isNumberNextToSymbol(n, symbolLocs) {
 			partOneTotal += n.value
 		}
-
 	}
 
-	fmt.Printf("Part 1: %v\n", partOneTotal) // 551094
-
-	fmt.Println("gearSymbolLocs:", len(gearLocs))
+	fmt.Printf("Part 1: %v\n", partOneTotal)
 
 	for _, g := range gearLocs {
 		overlappingNumbers := getOverlappingNumbers(numberLocs, g[0], g[1])
-		// fmt.Println("numbers", numbers)
 		if len(overlappingNumbers) > 1 {
 			partTwoTotal += overlappingNumbers[0].value * overlappingNumbers[1].value
 		}
